@@ -239,7 +239,7 @@ body {
 }
 
 .solution-card {
-  background-color: #1a1a1a; /* Changed to a lighter black to stand out */
+  background-color: #1a1a1a;
   padding: 40px;
   border-radius: 10px;
   transition: box-shadow 0.3s ease;
@@ -275,7 +275,7 @@ body {
 }
 
 .benefit-card {
-  background-color: #1a1a1a; /* Changed to a lighter black to stand out */
+  background-color: #1a1a1a;
   padding: 40px;
   border-radius: 10px;
 }
@@ -341,7 +341,7 @@ body {
 }
 
 .feature-card {
-  background-color: #1a1a1a; /* Changed to a lighter black to stand out */
+  background-color: #1a1a1a;
   padding: 30px;
   border-radius: 10px;
   text-align: left;
@@ -386,87 +386,3 @@ body {
   background-color: #1a1a1a;
   padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
-
-.login-form-box h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  font-weight: 600;
-}
-
-.input-group {
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.input-group label {
-  display: block;
-  font-size: 14px;
-  margin-bottom: 5px;
-  color: #aaa;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #333;
-  background-color: #222;
-  color: #fff;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.login-btn {
-  width: 100%;
-  padding: 12px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.login-btn:hover {
-  background-color: #0056b3;
-}
-
-/* --- Forgot Password Link Style --- */
-.forgot-password-link {
-  display: block;
-  margin-top: 15px;
-  color: #007bff;
-  font-size: 14px;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.forgot-password-link:hover {
-  color: #fff;
-}
-
-/* --- Logo Link Style --- */
-.logo a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* --- CSS for Transition Effect --- */
-.login-page-container {
-  opacity: 0;
-  animation: fadeIn 0.6s ease-in forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
