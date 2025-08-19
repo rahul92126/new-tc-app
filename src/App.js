@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import truckImage from './assets/truck-on-highway.jpg';
 import { FaGlobe } from 'react-icons/fa';
 import HomePage from './HomePage';
 import LoginPage from './LoginPage';
