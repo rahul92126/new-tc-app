@@ -3,8 +3,9 @@ import truckImage from './assets/truck-on-highway.jpg';
 
 function HomePage() {
   return (
-    <main className="login-page-container">
+    <main className="main-content">
       <section className="hero-section">
+        {/* The content is no longer wrapped in a centering container */}
         <div className="hero-content">
           <h1>TruckCart for your business</h1>
           <p>TC for Business gives your organization more control, deeper insights, and features built for enterprise users. Manage and track business transport on one dashboard.</p>
@@ -17,12 +18,15 @@ function HomePage() {
           <img src={truckImage} alt="Transportation truck on a highway" />
         </div>
       </section>
+
       <section className="global-platform-section">
         <div className="platform-content">
           <p>A B2B platform built on India's largest transport network</p>
         </div>
       </section>
+
       <section className="solutions-section">
+        {/* The content is no longer wrapped in a centering container */}
         <h2>Solutions that meet your business needs</h2>
         <div className="solutions-grid">
           <div className="solution-card">
@@ -39,6 +43,7 @@ function HomePage() {
           </div>
         </div>
       </section>
+      
       <section className="features-section">
         <h2>Designed for what your business needs</h2>
         <div className="features-grid">
@@ -61,7 +66,7 @@ function HomePage() {
       </section>
       <section className="why-tc-section">
         <h2>Why businesses choose TC</h2>
-        <div className="benefits-container">
+        <div className="benefits-grid">
           <div className="benefit-card">
             <div className="benefit-content">
               <h3>Simplified transport booking</h3>
