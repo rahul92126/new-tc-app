@@ -1,38 +1,462 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* General Body and Fonts */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  color: #000000;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 0px 20px rgba(241, 232, 232, 0.05);
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 1000;
+  color: #ede9e9;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+/* Dropdown Buttons */
+.nav-dropdown,
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #e8dede;
+  transition: all 0.5s ease;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.dropbtn:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(14, 13, 13);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(199, 177, 177, 0.1);
+  z-index: 1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.nav-dropdown:hover .dropdown-content,
+.lang-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content button,
+.dropdown-content p {
+  color: #f0e8e8;
+  padding: 12px 16px;
+  text-decoration:solid;
+  display:list-item;
+  width: 100%;
+  text-align: center;
+  border: none;
+  background:#000000;
+  cursor: pointer;
+  font-size: 1rem;
+  font:1em sans-serif;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: background-color 1s ease;
+}
+
+.dropdown-content button:hover {
+  background-color: #a34646;
+}
+
+.description-text {
+  font-size: 1.2rem;
+  color: #e1dada;
+  line-height: 1.5;
+  box-sizing:border-box;
+  padding: 12px 16px;
+}
+
+/* Auth and Language Buttons */
+.auth-and-lang-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.auth-btn {
+  background-color: #098019 ;
+  border-radius: 10PX;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #ece3e3;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.auth-btn:hover {
+  color: #f6f7f8;
+  background-color: #333;
+}
+
+.auth-btn.get-started {
+  background-color: rgb(232, 9, 9);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.auth-btn.get-started:hover {
+  background-color: #333;
+  color: white;
+}
+
+/* --- Hero Section Styles --- */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px 100px;
+  background-color: #000;
+  color: #fff;
+  gap: 50px;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.cta-buttons .primary-btn,
+.cta-buttons .secondary-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.primary-btn {
+  background-color: #fff;
+  color: #000;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-left: 10px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 600px;
+  display: ruby;
+  height: auto;
+  border-radius: 10px;
+  shape-outside: margin-box;
+}
+.hero-image img:hover{
+  zoom: 110%;
+  transition:all 0.8s ease-in;
+  
+}
+/* --- Global Platform Section --- */
+.global-platform-section {
+  text-align: center;
+  background-color: #000;
+  padding: 50px 20px;
+  border-bottom: 1px solid #222;
+}
+
+.global-platform-section p {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* --- Solutions Section --- */
+.solutions-section {
+  padding: 80px 50px;
+  background-color: #000000;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.solutions-section h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.solutions-grid {
+  display:grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 20px;
+  text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.solution-card {
+  background-color: #000000;
+  padding: 40px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.solution-card:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.solution-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* --- Why TC Section --- */
+.why-tc-section {
+  padding: 80px 50px;
+  background-color: #000;
+  text-align: center;
+}
+
+.why-tc-section h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.benefits-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  text-align: left;
+}
+
+.benefit-card {
+  background-color: #000000;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.benefit-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* --- CTA Section --- */
+.cta-section {
+  padding: 80px 50px;
+  background-color: #000000;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.cta-section button{
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-sizing: content-box;
+  color: #e0e0e0;
+  background-color: #098019;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-section button:hover{
+  color: #f6f7f8;
+  background-color: #333;
+}
+
+/* --- Features Section Styles --- */
+.features-section {
+  padding: 80px 50px;
+  text-align: center;
+  background-color: #000000;
+}
+
+.features-section h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: #000000;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  transition: box-shadow 0.3s ease;
+}
+
+.feature-card:hover{
+  box-shadow: 0 0 20px rgba(245, 247, 245, 0.4);
+}
+
+.feature-card img {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* --- Footer Styles --- */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  border-top: 1px solid #333;
+}
+
+/* --- Login Page Styles --- */
+.login-page-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  background-color: #0e0e0e; /* Matches your website's dark background */
+  color: #fff;
+  padding: 50px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.login-form-box {
+  background-color: #1a1a1a; /* Matches your card colors */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
+.login-form-box h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #aaa;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #333;
+  background-color: #222;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* --- Forgot Password Link Style --- */
+.forgot-password-link {
+  display: block;
+  margin-top: 15px;
+  color: #007bff; /* Blue to match your primary button */
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover {
+  color: #fff; /* White on hover for better visibility */
+}
+
+/* --- Logo Link Style --- */
+.logo a {
+  text-decoration: none;
+  color: inherit; /* This makes the link's color inherit from its parent */
+}
+
+/* --- CSS for Transition Effect --- */
+.login-page-container {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-in forwards;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
 }
